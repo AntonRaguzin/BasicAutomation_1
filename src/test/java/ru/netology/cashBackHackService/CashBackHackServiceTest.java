@@ -3,6 +3,7 @@ package ru.netology.cashBackHackService;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class CashBackHackServiceTest {
 
@@ -21,6 +22,20 @@ public class CashBackHackServiceTest {
         int expected = 0;
         int actual = service.remain(amount);
         Assert.assertEquals(expected, actual);
+    }
+    @org.junit.jupiter.api.Test
+    public void shouldShowAdditionalPayment300(){
+        int amount = 700;
+        int expected = 300;
+        int actual = service.remain(amount);
+        Assertions.assertEquals(expected, actual);
+    }
+    @org.junit.jupiter.api.Test
+    public void shouldShowZeroAdditionalPayment0(){
+        int amount = 1_000;
+        int expected = 0;
+        int actual = service.remain(amount);
+        Assertions.assertEquals(expected, actual);
     }
 
 }
