@@ -14,12 +14,12 @@ class CashBackHackServiceTest {
         int actual = service.remain(amount);
         assertEquals(expected, actual);
     }
-//    @Test
-//    public void shouldShowZeroAdditionalPayment(){
-//        int amount = 1_000;
-//        int expected = 0;
-//        int actual = service.remain(amount);
-//        assertEquals(expected, actual);
-//    }
+    @Test
+    public void shouldShowZeroAdditionalPayment(){
+        int amount = 1_000;
+        int expected = 0;
+        int actual = service.remain(amount);
+        assertEquals(expected, actual);
+    }
 
 }
